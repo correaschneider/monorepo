@@ -71,3 +71,40 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](LICENSE).
+
+
+
+# Usando monorepo e Git Submodule
+## Criando app/submodule
+Para adicionar um novo APP, antes de tudo, crie o repositório, adicione o submodule no repositório host
+
+```sh
+git submodule add -f git@github.com:correaschneider/monorepo-app1.git apps/NOME
+```
+
+Após, gere o app pelo nestjs
+
+```sh
+nest g application NOME
+```
+
+## Clonando
+Para clonar o projeto, use o comando:
+
+```sh
+git clone git@github.com:correaschneider/monorepo.git --recurse-submodules
+```
+
+Caso já tenha clonado sem a opção acima
+Após clonar o projeto pai, precisa clonar os submodule
+```sh
+git submodule update --init
+```
+
+## Mais info
+
+Para mais informações use os comandos
+```sh
+git clone --help
+git submodule --help
+```

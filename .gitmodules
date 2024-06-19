@@ -1,0 +1,6 @@
+[submodule "apps/app1"]
+	path = apps/app1
+	url = git@github.com:correaschneider/monorepo-app1.git
+[submodule "apps/app"]
+	path = apps/app
+	url = git@github.com:correaschneider/monorepo-app.git

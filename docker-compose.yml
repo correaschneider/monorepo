@@ -1,9 +1,21 @@
 services:
 
-  nest:
+  app:
     build: .
     image: monorepo-nest
     container_name: monorepo
+    ports:
+      - "3000:3000"
     volumes:
       - ./:/app
-    command: npm run start:dev
+    command: npm run start:dev -- app
+
+  app1:
+    build: .
+    image: monorepo-nest
+    container_name: monorepo
+    ports:
+      - "3001:3000"
+    volumes:
+      - ./:/app
+    command: npm run start:dev -- app1
