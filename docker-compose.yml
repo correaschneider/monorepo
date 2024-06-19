@@ -1,0 +1,9 @@
+services:
+
+  nest:
+    build: .
+    image: monorepo-nest
+    container_name: monorepo
+    volumes:
+      - ./:/app
+    command: npm run start:dev
